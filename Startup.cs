@@ -47,7 +47,7 @@ namespace OcelotTest
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapRazorPages();
+               // endpoints.MapRazorPages();
             });
 
             app.UseOcelot().Wait();

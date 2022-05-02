@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OcelotTest
 {
-    public class Program
+    public static class Program
     {
         public static void Main(string[] args)
         {
@@ -20,8 +20,12 @@ namespace OcelotTest
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
+                    var env = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.ConfigureAppConfiguration(config =>
+                        config.AddJsonFile($"ocelot.dev.json"));
                 })
+
             .ConfigureLogging(logging => logging.AddConsole());
     }
 }
