@@ -2,11 +2,11 @@
   "Routes": [
     {
       "DownstreamPathTemplate": "/api/ephemeral",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "micro-service-application-gaurav-saini-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com",
+          "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/api/ephemeral",
@@ -16,11 +16,11 @@
     },
     {
       "DownstreamPathTemplate": "/api/perpetual",
-      "DownstreamScheme": "http",
+      "DownstreamScheme": "https",
       "DownstreamHostAndPorts": [
         {
-          "Host": "localhost",
-          "Port": 5000
+          "Host": "micro-service-application-gaurav-saini-dev.apps.sandbox-m2.ll9k.p1.openshiftapps.com",
+          "Port": 443
         }
       ],
       "UpstreamPathTemplate": "/api/perpetual",
